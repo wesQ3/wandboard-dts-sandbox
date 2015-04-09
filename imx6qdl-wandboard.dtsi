@@ -166,7 +166,8 @@
 		default_ifmt = "RGB565";
 		pinctrl-names = "default";
 		pinctrl-0 = <&pinctrl_ipu1_1>;
-		status = "okay";
+		/* status = "okay"; */
+		status = "disabled";
 	};
 
 	backlight_lcd {
@@ -393,6 +394,9 @@ reference manual.
 				MX6QDL_PAD_ENET_RX_ER__GPIO1_IO24 0x4001b0b0 /* GPIO1_24 EDM pin 262 */
 				MX6QDL_PAD_GPIO_19__GPIO4_IO05    0x4001b0b0 /* GPIO4_5  EDM pin 263 */
 				MX6QDL_PAD_SD3_RST__GPIO7_IO08    0x4001b0b0 /* GPIO7_8  EDM pin 264 */
+                /* WES RUINS EVERYTHING BELOW */
+                MX6QDL_PAD_DISP0_DAT0__GPIO4_IO21 0x4001b0b0 /* GPIO4_21 GPIO117 JP1-1*/
+                /*MX6QDL_PAD_EIM_D21__GPIO3_IO21    0x4001b0b0 /* GPIO3_21 GPIO85 JP2-9 */
 			>;
 		};
 	};
