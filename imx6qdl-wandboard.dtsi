@@ -371,13 +371,6 @@ reference manual.
 				MX6QDL_PAD_CSI0_VSYNC__GPIO5_IO21	0x80000000	/* BT_ON */
 				MX6QDL_PAD_CSI0_DAT12__GPIO5_IO30	0x80000000	/* BT_WAKE */
 				MX6QDL_PAD_CSI0_DATA_EN__GPIO5_IO20     0x80000000	/*BT_HOST_WAKE */
-                /* new stuff here */
-                MX6QDL_PAD_ENET_CRS_DV__GPIO1_IO25 0x4001b0b0 /* pin 25 test point lead */
-                /* WES RUINS EVERYTHING BELOW */
-                MX6QDL_PAD_DISP0_DAT0__GPIO4_IO21 0x4001b0b0 /* GPIO4_21 GPIO117 JP1-1*/
-                MX6QDL_PAD_EIM_D21__GPIO3_IO21    0x4001b0b0 /* GPIO3_21 GPIO85 JP2-9 */
-                  MX6QDL_PAD_GPIO_5__GPIO1_IO05  0x4001b0b0 /* gpio5 jp2-17 */
-                  MX6QDL_PAD_GPIO_16__GPIO7_IO11 0x4001b0b0 /* gpio203 jp2-15 */
 			>;
 		};
 
@@ -512,5 +505,27 @@ reference manual.
 	vmmc-supply = <&reg_3p3v>;
         cd-gpios = <&gpio3 9 0>;
 	status = "okay";
+};
+
+&iomuxc {
+	pinctrl-names = "default";
+	pinctrl-0 = <
+        &pinctrl_hog_1
+        &wes_gpios
+    >;
+
+	imx6qdl-wandboard {
+        wes_gpios: hoggrp-2 {
+            fsl,pins = <
+                /* WES RUINS EVERYTHING BELOW */
+                MX6QDL_PAD_ENET_CRS_DV__GPIO1_IO25 0x4001b0b0 /* pin 25 test point lead */
+                MX6QDL_PAD_DISP0_DAT0__GPIO4_IO21  0x4001b0b0 /* GPIO4_21 GPIO117 JP1-1*/
+                MX6QDL_PAD_GPIO_5__GPIO1_IO05      0x4001b0b0 /* gpio5 jp2-17 */
+                MX6QDL_PAD_GPIO_16__GPIO7_IO11     0x4001b0b0 /* gpio203 jp2-15 */
+                /* this one breaks hdmi */
+                /* MX6QDL_PAD_EIM_D21__GPIO3_IO21    0x4001b0b0 */ /* GPIO3_21 GPIO85 JP2-9 */
+            >;
+        };
+	};
 };
 
