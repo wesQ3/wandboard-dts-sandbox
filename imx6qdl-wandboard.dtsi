@@ -372,7 +372,12 @@ reference manual.
 				MX6QDL_PAD_CSI0_DAT12__GPIO5_IO30	0x80000000	/* BT_WAKE */
 				MX6QDL_PAD_CSI0_DATA_EN__GPIO5_IO20     0x80000000	/*BT_HOST_WAKE */
                 /* new stuff here */
-                MX6QDL_PAD_ENET_CRS_DV__GPIO1_IO25 0x1b0b0
+                MX6QDL_PAD_ENET_CRS_DV__GPIO1_IO25 0x4001b0b0 /* pin 25 test point lead */
+                /* WES RUINS EVERYTHING BELOW */
+                MX6QDL_PAD_DISP0_DAT0__GPIO4_IO21 0x4001b0b0 /* GPIO4_21 GPIO117 JP1-1*/
+                MX6QDL_PAD_EIM_D21__GPIO3_IO21    0x4001b0b0 /* GPIO3_21 GPIO85 JP2-9 */
+                  MX6QDL_PAD_GPIO_5__GPIO1_IO05  0x4001b0b0 /* gpio5 jp2-17 */
+                  MX6QDL_PAD_GPIO_16__GPIO7_IO11 0x4001b0b0 /* gpio203 jp2-15 */
 			>;
 		};
 
@@ -395,11 +400,6 @@ reference manual.
 				MX6QDL_PAD_ENET_RX_ER__GPIO1_IO24 0x4001b0b0 /* GPIO1_24 EDM pin 262 */
 				MX6QDL_PAD_GPIO_19__GPIO4_IO05    0x4001b0b0 /* GPIO4_5  EDM pin 263 */
 				MX6QDL_PAD_SD3_RST__GPIO7_IO08    0x4001b0b0 /* GPIO7_8  EDM pin 264 */
-                /* WES RUINS EVERYTHING BELOW */
-                MX6QDL_PAD_DISP0_DAT0__GPIO4_IO21 0x4001b0b0 /* GPIO4_21 GPIO117 JP1-1*/
-                /*MX6QDL_PAD_EIM_D21__GPIO3_IO21    0x4001b0b0 /* GPIO3_21 GPIO85 JP2-9 */
-                  MX6QDL_PAD_GPIO_5__GPIO1_IO05  0x1a0b0
-                  MX6QDL_PAD_GPIO_16__GPIO7_IO11 0x1b0b0
 			>;
 		};
 	};
