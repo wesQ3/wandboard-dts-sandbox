@@ -460,6 +460,12 @@ reference manual.
 	status = "okay";
 };
 
+&uart2 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_uart2_3>;
+	status = "okay";
+};
+
 &uart3 {
         pinctrl-names = "default";
         pinctrl-0 = <&pinctrl_uart3_2>;
