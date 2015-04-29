@@ -523,11 +523,37 @@ reference manual.
 	imx6qdl-wandboard {
         wes_gpios: hoggrp-2 {
             fsl,pins = <
-                /* WES RUINS EVERYTHING BELOW */
                 MX6QDL_PAD_ENET_CRS_DV__GPIO1_IO25 0x4001b0b0 /* pin 25 test point lead */
-                MX6QDL_PAD_DISP0_DAT0__GPIO4_IO21  0x4001b0b0 /* GPIO4_21 GPIO117 JP1-1*/
                 MX6QDL_PAD_GPIO_5__GPIO1_IO05      0x4001b0b0 /* gpio5 jp2-17 */
                 MX6QDL_PAD_GPIO_16__GPIO7_IO11     0x4001b0b0 /* gpio203 jp2-15 */
+
+                /* JP1 header */
+                MX6QDL_PAD_DISP0_DAT0__GPIO4_IO21  0x4001b0b0 /* GPIO4_21 GPIO117 JP1-1*/
+                MX6QDL_PAD_DISP0_DAT1__GPIO4_IO22  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT2__GPIO4_IO23  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT3__GPIO4_IO24  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT4__GPIO4_IO25  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT5__GPIO4_IO26  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT6__GPIO4_IO27  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT7__GPIO4_IO28  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT8__GPIO4_IO29  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT9__GPIO4_IO30  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT10__GPIO4_IO31  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT11__GPIO5_IO05  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT12__GPIO5_IO06  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT13__GPIO5_IO07  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT14__GPIO5_IO08  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT15__GPIO5_IO09  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT16__GPIO5_IO10  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT17__GPIO5_IO11  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT18__GPIO5_IO12  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT19__GPIO5_IO13  0x4001b0b0 /* gpio 141 */
+
+                MX6QDL_PAD_DISP0_DAT20__GPIO5_IO14  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT21__GPIO5_IO15  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT22__GPIO5_IO16  0x4001b0b0
+                MX6QDL_PAD_DISP0_DAT23__GPIO5_IO17  0x4001b0b0
+
                 /* this one breaks hdmi */
                 /* MX6QDL_PAD_EIM_D21__GPIO3_IO21    0x4001b0b0 */ /* GPIO3_21 GPIO85 JP2-9 */
             >;
