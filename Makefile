@@ -1,5 +1,5 @@
-TARGET=dualwand
-USER=debian
+TARGET=10.6.1.212
+USER=wandboard
 
 imx6q-wandboard.dtb: imx6q-wandboard.i
 	../dtc/dtc --out-format dtb -i include --out imx6q-wandboard.dtb imx6q-wandboard.i
@@ -17,9 +17,9 @@ clean:
 	rm -f *.i *.dtb *.d
 
 send: imx6q-wandboard.dtb imx6dl-wandboard.dtb
-	scp *.dtb $(TARGET):/home/$(USER)/
+	scp *.dtb $(USER)@$(TARGET):/home/$(USER)/
 
 try: send
-	ssh -t $(TARGET) "sudo chown root:root /home/$(USER)/*.dtb && sudo mv /home/$(USER)/*.dtb /boot/dtbs/ && sudo reboot"
+	ssh -t $(USER)@$(TARGET) "sudo chown root:root /home/$(USER)/*.dtb && sudo mv /home/$(USER)/*.dtb /boot/boot/ && sudo reboot"
 
 .PHONY: clean send try
