@@ -23,15 +23,21 @@
 	compatible = "fsl,imx6q-wandboard", "fsl,imx6q";
 };
 
+&ldb {
+	lvds-channel@0 {
+		crtc = "ipu1-di1";
+	};
+};
+
 &mxcfb1 {
 	status = "okay";
 };
 
-#if 0
 &mxcfb2 {
 	status = "okay";
 };
 
+#if 0
 &mxcfb3 {
 	status = "okay";
 };
