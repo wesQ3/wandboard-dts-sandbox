@@ -535,6 +535,7 @@ reference manual.
 	imx6qdl-wandboard {
         wes_gpios: hoggrp-2 {
             fsl,pins = <
+                /* linux gpio number = (gpio_bank - 1) * 32 + gpio_bit */
                 MX6QDL_PAD_ENET_CRS_DV__GPIO1_IO25 0x4001b0b0 /* pin 25 test point lead */
                 MX6QDL_PAD_GPIO_5__GPIO1_IO05      0x4001b0b0 /* gpio5 jp2-17 */
                 MX6QDL_PAD_GPIO_16__GPIO7_IO11     0x4001b0b0 /* gpio203 jp2-15 */
