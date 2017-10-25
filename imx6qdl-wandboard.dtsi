@@ -62,7 +62,7 @@
 	};
 
 	sound {
-		compatible = "fsl,imx6-wandboard-sgtl5000", 
+		compatible = "fsl,imx6-wandboard-sgtl5000",
                              "fsl,imx-audio-sgtl5000";
 		model = "imx6-wandboard-sgtl5000";
 		cpu-dai = <&ssi1>;
@@ -539,6 +539,8 @@ reference manual.
                 MX6QDL_PAD_ENET_CRS_DV__GPIO1_IO25 0x4001b0b0 /* pin 25 test point lead */
                 MX6QDL_PAD_GPIO_5__GPIO1_IO05      0x4001b0b0 /* gpio5 jp2-17 */
                 MX6QDL_PAD_GPIO_16__GPIO7_IO11     0x4001b0b0 /* gpio203 jp2-15 */
+                MX6QDL_PAD_GPIO_18__GPIO7_IO13     0x4001b0b0 /* gpio205 rev d1 eth enable*/
+
 
                 /* JP1 header */
                 MX6QDL_PAD_DISP0_DAT0__GPIO4_IO21  0x4001b0b0 /* GPIO4_21 GPIO117 JP1-1*/

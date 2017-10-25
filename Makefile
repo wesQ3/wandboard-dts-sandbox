@@ -1,4 +1,4 @@
-TARGET=10.6.1.212
+TARGET=10.6.1.88
 USER=wandboard
 
 imx6q-wandboard.dtb: imx6q-wandboard.i
